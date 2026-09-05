@@ -4,6 +4,6 @@ variable "aws_region" {
 } 
 
 variable "bucket_name" { 
-  description = "bucketlunaclassagain" 
+  description = "bucketlunitasclassagain33452" 
   type        = string 
 } 
