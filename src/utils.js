@@ -1,3 +1,5 @@
+const apiKey = "sk_live_51Hxxxxxxxxxxxxxxxxxxxxxxxxx";
+
 function calculateTotal(price, tax) {
   return price + tax;
 }
