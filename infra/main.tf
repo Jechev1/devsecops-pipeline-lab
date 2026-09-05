@@ -12,13 +12,19 @@ provider "aws" {
   region = var.aws_region 
 } 
 
-resource "aws_s3_bucket" "site" { 
-  bucket = var.bucket_name 
-  tags = { 
-    Proyecto = "DevSecOps-Lab3-4" 
-    Entorno  = "laboratorio" 
-  } 
-} 
+resource "random_id" "bucket_suffix" {
+  byte_length = 4
+}
+
+resource "aws_s3_bucket" "site" {
+  bucket = "${var.bucket_name}-${random_id.bucket_suffix.hex}"
+  
+  tags = {
+    "Entorno"  = "laboratorio"
+    "Proyecto" = "DevSecOps-Lab3-4"
+  }
+}
+
 
 resource "aws_s3_bucket_public_access_block" "site" { 
   bucket                  = aws_s3_bucket.site.id 
