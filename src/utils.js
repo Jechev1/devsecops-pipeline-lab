@@ -1,4 +1,4 @@
-function calculateTotal(price, tax) {
+function calculateTotal(price, tax) { 
   return price + tax;
 }
 
