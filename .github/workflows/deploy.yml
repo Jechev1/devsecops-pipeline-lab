@@ -38,4 +38,4 @@ jobs:
 
         run: terraform apply -auto-approve -var="bucket_name=${{ secrets.BUCKET_NAME }}"
 
-        working-directory: ./infra
+        working-directory: ./infra 
